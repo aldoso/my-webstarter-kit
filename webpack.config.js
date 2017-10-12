@@ -1,12 +1,12 @@
 module.exports = {
 
   //define entry point
-  entry: './scripts/index.js',
+  entry: './app/scripts/app.js',
 
   //define output point
   output: {
-    // path: '', //folder name
-    filename: 'bundle.js',
+    path: __dirname + "/dist", //folder name
+    filename: 'bundle.js', //bundle all javascript files here
   },
 
   module: {
@@ -19,11 +19,12 @@ module.exports = {
                     presets: ['es2015']
                 }
             },
-            {
-                test: /\.sass$/,
-                loader: 'style-loader!css-loader!sass-loader'
-            }
+            // { //not necessary if using GULP
+            //     test: /\.sass$/,
+            //     loader: 'style-loader!css-loader!sass-loader'
+            // }
         ] //loaders
+
     } //module
 
 }

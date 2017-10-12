@@ -4,3 +4,4 @@ require('../styles/style.sass')
 const component = require('./component')
 
 document.write( `Hello, ${component}!` )
+document.write('adfsadfsdaf')
