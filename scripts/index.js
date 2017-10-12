@@ -1,5 +1,6 @@
-require('../styles/style.sass') //add style directly to hmtl
+//injecting sass directly into js not html
+require('../styles/style.sass')
 
 const component = require('./component')
 
-alert( `Hello, ${component}!` )
+document.write( `Hello, ${component}!` )

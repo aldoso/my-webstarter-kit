@@ -74,7 +74,7 @@ __webpack_require__(1); //add style directly to hmtl
 
 var component = __webpack_require__(6);
 
-alert('Hello, ' + component + '!');
+document.write('Hello, ' + component + '!');
 
 /***/ }),
 /* 1 */
