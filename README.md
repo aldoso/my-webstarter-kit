@@ -4,11 +4,13 @@ Modern Web Starter Kit:
 -live server: autoreload and cross-device syncronization
 -Bootstrap 4 Template
 -SASS workflow
--component workflow: mix multiple .js files into a single bundle.js files (webpack)
+-component workflow: mix multiple .js files into a single bundle.js files (gulp or webpack)
 -compiling es6 to browser-compatible JavaScript (webpack)
 
 -- to add features from Web Starter Kit
--add minify
+-add minify / uglifiy css and js
+-add minify for html in /dist
+
 
 HOW IT WORKS
 -index.js from scripts controls the index.html
