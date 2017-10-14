@@ -1,16 +1,1 @@
-body {
-  position: relative;
-  padding: 0;
-  margin: 0; }
-
-header {
-  background-color: darkblue;
-  padding: 50px;
-  color: yellow; }
-
-footer {
-  background-color: darkred;
-  height: 20vh;
-  width: 100%;
-  position: fixed;
-  bottom: 0; }
+body{position:relative;padding:0;margin:0}header{background-color:#00008b;padding:50px;color:#ff0}footer{background-color:#8b0000;height:20vh;width:100%;position:fixed;bottom:0}

@@ -1,13 +1,19 @@
 const gulp        = require('gulp')
 const browserSync = require('browser-sync').create()
 const sass        = require('gulp-sass')
-const webpack     = require('webpack-stream');
+const webpack     = require('webpack-stream')
 const concat      = require('gulp-concat')
+const htmlmin     = require('gulp-htmlmin')
+const cleanCSS    = require('gulp-clean-css')
+const minify      = require('gulp-minify')
+const uglify      = require('gulp-uglify') // !!!!!!!!!! neds to be tested more. Apparently does the same as minify(?)
+
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
     return gulp.src(['./app/styles/*.sass'])
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("./dist/"))
         .pipe(browserSync.stream())
 })
@@ -17,6 +23,15 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
   return gulp.src('./app/scripts/*.js')
     .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: [''],
+        ignoreFiles: ['']
+    }))
+    // .pipe(uglify())
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream())
 })
@@ -24,7 +39,8 @@ gulp.task('scripts', function() {
 // Copy any html from /app to /dist
 gulp.task('html', function() {
 	gulp.src('./app/*.html')
-    .pipe(concat('index.html'))
+    // .pipe(concat('index.html'))
+    .pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./dist/'))
 });
 
