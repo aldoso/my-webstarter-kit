@@ -1,2 +1,2 @@
 module.exports = 'it works'
-console.log('this is component.js')
+console.log('this is the component.js')

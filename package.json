@@ -16,7 +16,9 @@
     "url": "https://github.com/aldoso/my-webstarter-kit/issues"
   },
   "homepage": "https://github.com/aldoso/my-webstarter-kit#readme",
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-es2016": "^6.24.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
