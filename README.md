@@ -8,7 +8,9 @@ Modern Web Starter Kit:
 -compiling es6 to browser-compatible JavaScript (webpack)
 
 -- to add features from Web Starter Kit
--add minify
+-add minify / uglifiy css and js
+-add minify for html in /dist
+
 
 HOW IT WORKS
 -index.js from scripts controls the index.html
@@ -23,5 +25,4 @@ INSTALLATION
 -console run npm install (all packages from package.json)
 
 RUN
--console run "npm start" to start the server and compile SASS files into /dist/index.css
--console run 'webpack' to bundle all js files from 'scripts' into one file: bundle.js and all .sass files in the browser
+-console run "npm start" to start the server and compile SASS files into /dist/index.css and js files into one single bundle.js
