@@ -6,7 +6,7 @@ module.exports = {
   //define output point
   output: {
     path: __dirname + "/dist", //folder name
-    filename: 'bundle.js', //bundle all javascript files here
+    filename: 'script.js', //bundle all javascript files here
   },
 
   module: {

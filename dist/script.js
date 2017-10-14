@@ -74,9 +74,9 @@
 // require('../styles/style.sass')
 
 var component = __webpack_require__(1);
+document.write('Well hello, ' + component);
 
-document.write('Hello, ' + component);
-console.log('this is the app.js');
+// console.log('this is the app.js')
 
 /***/ }),
 /* 1 */
@@ -86,7 +86,7 @@ console.log('this is the app.js');
 
 
 module.exports = 'it works';
-console.log('this is the component.js');
+// console.log('this is the component.js')
 
 /***/ })
 /******/ ]);

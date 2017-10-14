@@ -1,10 +1,8 @@
 const gulp        = require('gulp')
-const shell       = require('gulp-shell')
 const browserSync = require('browser-sync').create()
 const sass        = require('gulp-sass')
 const webpack     = require('webpack-stream');
-const babel       = require('gulp-babel')
-// const concat      = require('gulp-concat')
+const concat      = require('gulp-concat')
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
@@ -23,18 +21,22 @@ gulp.task('scripts', function() {
     .pipe(browserSync.stream())
 })
 
-
+// Copy any html from /app to /dist
+gulp.task('html', function() {
+	gulp.src('./app/*.html')
+    .pipe(concat('index.html'))
+		.pipe(gulp.dest('./dist/'))
+});
 
 // Watch Sass & Serve
-gulp.task('serve', [ 'sass', 'scripts'], function() {
+gulp.task('serve', ['html', 'sass', 'scripts'], function() {
     browserSync.init({
-        server: "./"
+        server: "./dist"
     });
 
     gulp.watch(['app/styles/*.sass'], ['sass']);
-
     gulp.watch(['app/scripts/*.js'], ['scripts']);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch(["app/*.html"]).on('change', browserSync.reload);
 });
 
 // Default Task
