@@ -31,7 +31,7 @@ gulp.task('scripts', function() {
         exclude: [''],
         ignoreFiles: ['']
     }))
-    // .pipe(uglify())
+    // .pipe(uglify()) // test this more !!!
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream())
 })
