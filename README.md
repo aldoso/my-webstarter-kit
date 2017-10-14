@@ -4,7 +4,7 @@ Modern Web Starter Kit:
 -live server: autoreload and cross-device syncronization
 -Bootstrap 4 Template
 -SASS workflow
--component workflow: mix multiple .js files into a single bundle.js files (gulp or webpack)
+-component workflow: mix multiple .js files into a single bundle.js files (webpack)
 -compiling es6 to browser-compatible JavaScript (webpack)
 
 -- to add features from Web Starter Kit
@@ -25,5 +25,4 @@ INSTALLATION
 -console run npm install (all packages from package.json)
 
 RUN
--console run "npm start" to start the server and compile SASS files into /dist/index.css
--console run 'webpack' to bundle all js files from 'scripts' into one file: bundle.js and all .sass files in the browser
+-console run "npm start" to start the server and compile SASS files into /dist/index.css and js files into one single bundle.js
