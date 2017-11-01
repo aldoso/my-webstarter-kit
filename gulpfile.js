@@ -52,6 +52,7 @@ gulp.task('serve', ['html', 'sass', 'scripts'], function() {
 
     gulp.watch(['app/styles/*.sass'], ['sass']);
     gulp.watch(['app/scripts/*.js'], ['scripts']);
+    gulp.watch(['app/*.html'], ['html']);
     gulp.watch(["app/*.html"]).on('change', browserSync.reload);
 });
 
